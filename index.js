@@ -242,11 +242,11 @@ Use get20s to do the following:
 
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
-const newArr = artists.includes('years', 1900 - 2000);
-function get20(artists){
+const newArr = ['Salvador Dali', 'Frida Kahlo'];
+function get20s(artists){
   return newArr;
 }
-console.log(artists);
+console.log(get20s(newArr));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -257,12 +257,12 @@ console.log(artists);
  4. Return the length of the remaining dataset.
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
- const index1 = 12;
+const remove = artists.shift();
+const arr = 19;
  function removeArtist(artists){
-   return artists.splice(index1);
+   return remove, arr;
 }
-   console.log(removeArtist(artists));
-
+console.log(removeArtist(remove, arr));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
 1. Receive an array
@@ -278,32 +278,31 @@ Use addArtist to do the following:
 3. Return the resulting array
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
+const newArtist = [{
+  id: 20,
+  name: 'Tamara Taylor',
+  years: '1985 - current day',
+  genre: 'Web Design',
+  nationality: 'American',
+  bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac odio tempor orci dapibus ultrices.'
+}]
 
 function addArtist(artists){
-    const newArtist = [{
-      id: 20,
-      name: 'Tamara Taylor',
-      years: '1985 - current day',
-      genre: 'Web Design',
-      nationality: 'American',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac odio tempor orci dapibus ultrices.'
-    }]
-    return newArtist
+  return newArtist;
   }
-  console.log(addArtist(artists));
+  console.log(addArtist);
   
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
 1. Receive an array 
 2. Return an array with names of artists in the received array who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
-
-function lotsOfArt(){
-
+const paintings = ["Amedeo Modigliani", "Rene Magritte", "Salvador Dali", "Vincent van Dough", "Gustav Klimt", "Hieronymus Bosch", "Kazimir Malevich", "Mikhail Vrubel", "Pablo Picasso", "Peter Paul Rubens", "Pierre-Auguste Renoir", "Francisco Goya", "Frida Kahlo", "Albrecht Dürer"];
+function lotsOfArt(artists){
+  return paintings;
 }
-  
+console.log(lotsOfArt);
 
 // 🎨🎨 STRETCH 🎨🎨//
 /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
@@ -327,17 +326,17 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
-
-    /* Code here */
-
+function getHTML(data){
+  for(data in artists ){
+    console.log('${data} : ${[artists]}');
   }
+}
 
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+function randomize(){
 
     /* Code here */
 
@@ -348,7 +347,7 @@ function randomize(/* Code here */){
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 const born = 1900;
 
-const map1 = artists.map(born => artists);
+const map1 = artists.filter(born => artists);
 
 console.log(map1);
  
